@@ -12,7 +12,7 @@ import java.sql.Timestamp;
 @Getter
 public class Beer {
     private Integer id; // Primary Key
-    private Integer style_id;
+    private Integer styleId;
     private String name;
     private Timestamp createdAt;
 
