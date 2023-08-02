@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5895685d-5a4c-4183-8e8b-d422e83144ff" name="Changes" comment="feat: project initial setting&#10;BeerApp.java 파일 추가&#10;build.gradle 파일 추가: 프로젝트에 필요한 의존성 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/db/DBConnectionTest.java" afterDir="false" />
+    <list default="true" id="5895685d-5a4c-4183-8e8b-d422e83144ff" name="Changes" comment="feat: Beer, OutBeer, Brewery, Style의 model 작성">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/beer/Beer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/beer/Beer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/beer/BeerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/beer/BeerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/brewery/BreweryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/brewery/BreweryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/outbeer/OutBeerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/outbeer/OutBeerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/style/StyleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/style/StyleDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +49,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Gradle.DBConnectionTest">
     <configuration name="DBConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -119,7 +125,28 @@
       <option name="project" value="LOCAL" />
       <updated>1690806518292</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: DBConnection 연결 후 테스트 완료&#10;DBConnection.java 파일 추가: mySQL과 연동&#10;DBConnectionTest.java 파일 추가: DB 연동 테스트 완료">
+      <created>1690807111624</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690807111624</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: 패키지 설계 완료">
+      <created>1690911283255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690911283255</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: Beer, OutBeer, Brewery, Style의 model 작성">
+      <created>1690915350899</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690915350899</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +162,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: project initial setting&#10;BeerApp.java 파일 추가&#10;build.gradle 파일 추가: 프로젝트에 필요한 의존성 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: project initial setting&#10;BeerApp.java 파일 추가&#10;build.gradle 파일 추가: 프로젝트에 필요한 의존성 추가" />
+    <MESSAGE value="feat: DBConnection 연결 후 테스트 완료&#10;DBConnection.java 파일 추가: mySQL과 연동&#10;DBConnectionTest.java 파일 추가: DB 연동 테스트 완료" />
+    <MESSAGE value="feat: 패키지 설계 완료" />
+    <MESSAGE value="feat: Beer, OutBeer, Brewery, Style의 model 작성" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Beer, OutBeer, Brewery, Style의 model 작성" />
   </component>
 </project>
