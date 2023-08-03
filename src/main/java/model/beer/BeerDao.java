@@ -12,7 +12,7 @@ public class BeerDao {
     }
 
     // 맥주 등록
-    public int createBeer(int styleId, String beerName) {
+    public static int createBeer(int styleId, String beerName) {
         String query = "INSERT INTO beer (style_id, name, created_at) VALUES (?, ?, ?, now())";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, styleId);

@@ -2,10 +2,7 @@ package model.outbeer;
 
 import dto.OutBeerRespDto;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,7 +55,7 @@ public class OutBeerDao {
             Integer beerId = resultSet.getInt("id");
             String beerName = resultSet.getString("name");
             String outReason = resultSet.getString("reason");
-            String outDate = resultSet.getString("outDate");
+            Timestamp outDate  = resultSet.getTimestamp("outDate");
 
             return OutBeerRespDto.builder()
                     .beerId(beerId)
