@@ -12,7 +12,7 @@ public class BeerDao {
     }
 
     // 맥주 등록
-    public static int createBeer(int styleId, String beerName) {
+    public  int createBeer(int styleId, String beerName) {
         String query = "INSERT INTO beer (style_id, name, created_at) VALUES (?, ?, ?, now())";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, styleId);
@@ -65,10 +65,24 @@ public class BeerDao {
         return beers;
     }
 
+    // 맥주 단종
+    public int convertOutBeer(int beerId) {
+        String query = "UPDATE beer SET beer_id = null where id = ?";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, beerId);
+            return statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return -1;
+    }
+
     private Beer getBeerFromResultSet(ResultSet resultSet) {
         try {
-            int id = resultSet.getInt("id");
-            int styleId = resultSet.getInt("style_id");
+            Integer id = resultSet.getInt("id");
+            Integer styleId = resultSet.getInt("style_id");
+            styleId = styleId == 0 ? null : styleId;
             String name = resultSet.getString("name");
             Timestamp createdAt = resultSet.getTimestamp("created_at");
 

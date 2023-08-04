@@ -96,4 +96,21 @@ class BeerDaoTest {
         assertThat(beers.get(2).getName()).isEqualTo("삼분수괴즈");
         assertThat(beers.get(3).getName()).isEqualTo("사분수괴즈");
     }
+
+    @Test
+    @DisplayName("맥주 단종 시 styleId를 null로 변경")
+    void convertOutPlayerTest() {
+        // Given
+        beerDao.createBeer(1, "일분수괴즈");
+        int beerId = 1;
+
+        // When
+        beerDao.convertOutBeer(beerId);
+
+        // Then
+        Beer beer = beerDao.getBeerById(beerId);
+        assertThat(beer).isNotNull();
+        assertThat(beer.getStyleId()).isNull();
+    }
+
 }
