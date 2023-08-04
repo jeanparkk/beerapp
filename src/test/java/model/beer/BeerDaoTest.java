@@ -19,18 +19,16 @@ class BeerDaoTest {
 
     @BeforeEach
     void beforeEach() throws SQLException {
-        connection.setAutoCommit(false);
+        dbInit();
     }
 
     @AfterEach
     void afterEach() throws SQLException {
-        connection.rollback();
-        connection.commit();
-        connection.setAutoCommit(true);
-        // Auto_Increment 초기화
-        PreparedStatement statement = connection.prepareStatement("alter table beer auto_increment=?");
-        statement.setInt(1, 1);
-        statement.execute();
+        dbInit();
+    }
+    private void dbInit() throws SQLException {
+        connection.prepareStatement("DELETE FROM beer").execute();
+        connection.prepareStatement("alter table beer auto_increment=1").execute();
     }
 
     @Test
