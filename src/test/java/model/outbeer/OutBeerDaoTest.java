@@ -55,9 +55,9 @@ class OutBeerDaoTest {
     @DisplayName("단종 맥주 목록 조회")
     void getAllOutBeers() {
         // Given
-        BeerDao.createBeer(1, "일분수괴즈");
-        BeerDao.createBeer(1, "이분수괴즈");
-        BeerDao.createBeer(1, "삼분수괴즈");
+        beerDao.createBeer(1, "일분수괴즈");
+        beerDao.createBeer(1, "이분수괴즈");
+        beerDao.createBeer(1, "삼분수괴즈");
 
         outBeerDao.createOutBeer(2, "효모단종"); // 이분수괴즈 단종
         outBeerDao.createOutBeer(3, "시즌종료"); // 삼분수괴즈 단종
