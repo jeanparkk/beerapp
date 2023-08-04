@@ -1,14 +1,15 @@
 package model.outbeer;
 
 import dto.OutBeerRespDto;
+import lombok.Getter;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Getter
 public class OutBeerDao {
 
-    private Connection connection;
+    private final Connection connection;
 
     public OutBeerDao(Connection connection) {
         this.connection = connection;
