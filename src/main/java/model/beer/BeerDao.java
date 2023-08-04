@@ -1,11 +1,14 @@
 package model.beer;
 
+import lombok.Getter;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
 public class BeerDao {
-    private Connection connection;
+    private final Connection connection;
 
     public BeerDao(Connection connection) {
         this.connection = connection;
@@ -25,8 +28,7 @@ public class BeerDao {
 
         return -1;
 
-        // TODO : 발생할 수 있는 예외 사항
-        // 1. styleId에 해당하는 스타일이 존재하지 않는 경우
+
 
     }
 
@@ -59,7 +61,7 @@ public class BeerDao {
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-            return null;
+            throw new RuntimeException("ERROR: " + e.getMessage());
         }
 
         return beers;

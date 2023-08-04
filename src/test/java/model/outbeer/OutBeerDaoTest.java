@@ -24,17 +24,18 @@ class OutBeerDaoTest {
 
     @BeforeEach
     void beforeEach() throws SQLException {
-        connection.setAutoCommit(false);
+        dbInit();
     }
 
     @AfterEach
     void afterEach() throws SQLException {
-        connection.rollback();
-        connection.commit();
-        connection.setAutoCommit(true);
-        // Auto_Increment 초기화
-        connection.prepareStatement("alter table beer auto_increment=1").execute();
+        dbInit();
+    }
+    private void dbInit() throws SQLException {
+        connection.prepareStatement("DELETE FROM out_beer").execute();
+        connection.prepareStatement("DELETE FROM beer").execute();
         connection.prepareStatement("alter table out_beer auto_increment=1").execute();
+        connection.prepareStatement("alter table beer auto_increment=1").execute();
     }
 
     @Test
@@ -53,7 +54,7 @@ class OutBeerDaoTest {
 
     @Test
     @DisplayName("단종 맥주 목록 조회")
-    void getAllOutBeers() {
+    void getOutBeers() {
         // Given
         beerDao.createBeer(1, "일분수괴즈");
         beerDao.createBeer(1, "이분수괴즈");
