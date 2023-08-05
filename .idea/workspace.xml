@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5895685d-5a4c-4183-8e8b-d422e83144ff" name="Changes" comment="refactor: playerDao, outPlayerDao 코드 수정 및 테스트 코드 수정&#10;PlayerDao.java 코드 수정: Connection에 대한 getter 추가, 예외 처리&#10;OutPlayerDao.java 코드 수정: Connection에 대한 getter 추가&#10;PlayerDaoTest.java 코드 수정: DB 데이터 삭제 auto_increment 초기화 코드 추가&#10;OutPlayerDaoTest.java 코드 수정: DB 데이터 삭제 auto_increment 초기화 코드 추가">
-      <change afterPath="$PROJECT_DIR$/src/test/java/service/BeerServiceTest.java" afterDir="false" />
+    <list default="true" id="5895685d-5a4c-4183-8e8b-d422e83144ff" name="Changes" comment="feat: Beer Service 구현 및 테스트 완료&#10;BeerService.java 파일 추가&#10;BeerServiceTest.java 파일 추가">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/OutBeerServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/BeerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BeerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/OutBeerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/OutBeerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +48,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -195,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691180496490</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: Beer Service 구현 및 테스트 완료&#10;BeerService.java 파일 추가&#10;BeerServiceTest.java 파일 추가">
+      <created>1691262629914</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1691262629914</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,6 +227,7 @@
     <MESSAGE value="feat: Beer, OutBeer, Brewery, Style의 Dao의 테스트코드 작성&#10;feat: OutBeerRespDto, StyleRespDto 작성&#10;refactor: BeerDao, OutBeerDao, StyleDao 리펙토링" />
     <MESSAGE value="feat: Beer 단종 기능 추가" />
     <MESSAGE value="refactor: playerDao, outPlayerDao 코드 수정 및 테스트 코드 수정&#10;PlayerDao.java 코드 수정: Connection에 대한 getter 추가, 예외 처리&#10;OutPlayerDao.java 코드 수정: Connection에 대한 getter 추가&#10;PlayerDaoTest.java 코드 수정: DB 데이터 삭제 auto_increment 초기화 코드 추가&#10;OutPlayerDaoTest.java 코드 수정: DB 데이터 삭제 auto_increment 초기화 코드 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: playerDao, outPlayerDao 코드 수정 및 테스트 코드 수정&#10;PlayerDao.java 코드 수정: Connection에 대한 getter 추가, 예외 처리&#10;OutPlayerDao.java 코드 수정: Connection에 대한 getter 추가&#10;PlayerDaoTest.java 코드 수정: DB 데이터 삭제 auto_increment 초기화 코드 추가&#10;OutPlayerDaoTest.java 코드 수정: DB 데이터 삭제 auto_increment 초기화 코드 추가" />
+    <MESSAGE value="feat: Beer Service 구현 및 테스트 완료&#10;BeerService.java 파일 추가&#10;BeerServiceTest.java 파일 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Beer Service 구현 및 테스트 완료&#10;BeerService.java 파일 추가&#10;BeerServiceTest.java 파일 추가" />
   </component>
 </project>
