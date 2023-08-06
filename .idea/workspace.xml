@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5895685d-5a4c-4183-8e8b-d422e83144ff" name="Changes" comment="AppConfig.java 파일 추가: Connection, Dao, Service에 대한 의존성 관리">
+    <list default="true" id="5895685d-5a4c-4183-8e8b-d422e83144ff" name="Changes" comment="BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가">
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/BeerView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/CommandConst.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BeerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BeerApp.java" afterDir="false" />
     </list>
@@ -226,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691352985176</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가">
+      <created>1691353256271</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1691353256271</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,6 +261,7 @@
     <MESSAGE value="feat: Beer Service 구현 및 테스트 완료&#10;BeerService.java 파일 추가&#10;BeerServiceTest.java 파일 추가" />
     <MESSAGE value="feat: OutBeer Service 구현 및 테스트 완료&#10;OutBeerService.java 파일 추가&#10;OutBeerServiceTest.java 파일 추가" />
     <MESSAGE value="AppConfig.java 파일 추가: Connection, Dao, Service에 대한 의존성 관리" />
-    <option name="LAST_COMMIT_MESSAGE" value="AppConfig.java 파일 추가: Connection, Dao, Service에 대한 의존성 관리" />
+    <MESSAGE value="BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가" />
   </component>
 </project>

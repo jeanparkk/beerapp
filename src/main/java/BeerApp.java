@@ -1,4 +1,5 @@
 import db.DBConnection;
+import view.BeerView;
 
 import java.sql.Connection;
 import java.util.Map;
