@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5895685d-5a4c-4183-8e8b-d422e83144ff" name="Changes" comment="BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/BeerView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/CommandConst.java" afterDir="false" />
+    <list default="true" id="5895685d-5a4c-4183-8e8b-d422e83144ff" name="Changes" comment="feat: BeerApp Console 틀 구현&#10;BeerView.java 파일 추가: View 처리에 필요한 부분을 담당&#10;CommandConst.java 파일 추가: 사용자가 입력하는 명령어를 상수로 모음">
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/BeerAppView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/BreweryView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/OutBeerView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/StyleView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BeerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BeerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/BeerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/BeerView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +238,21 @@
       <option name="project" value="LOCAL" />
       <updated>1691353256271</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: BeerApp Console 틀 구현&#10;BeerView.java 파일 추가: View 처리에 필요한 부분을 담당&#10;CommandConst.java 파일 추가: 사용자가 입력하는 명령어를 상수로 모음&#10;BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가">
+      <created>1691354273471</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1691354273471</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: BeerApp Console 틀 구현&#10;BeerView.java 파일 추가: View 처리에 필요한 부분을 담당&#10;CommandConst.java 파일 추가: 사용자가 입력하는 명령어를 상수로 모음">
+      <created>1691354300329</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1691354300329</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +279,8 @@
     <MESSAGE value="feat: OutBeer Service 구현 및 테스트 완료&#10;OutBeerService.java 파일 추가&#10;OutBeerServiceTest.java 파일 추가" />
     <MESSAGE value="AppConfig.java 파일 추가: Connection, Dao, Service에 대한 의존성 관리" />
     <MESSAGE value="BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가" />
+    <MESSAGE value="feat: BeerApp Console 틀 구현&#10;BeerView.java 파일 추가: View 처리에 필요한 부분을 담당&#10;CommandConst.java 파일 추가: 사용자가 입력하는 명령어를 상수로 모음&#10;BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가" />
+    <MESSAGE value="feat: BeerApp Console 틀 구현&#10;BeerView.java 파일 추가: View 처리에 필요한 부분을 담당&#10;CommandConst.java 파일 추가: 사용자가 입력하는 명령어를 상수로 모음" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: BeerApp Console 틀 구현&#10;BeerView.java 파일 추가: View 처리에 필요한 부분을 담당&#10;CommandConst.java 파일 추가: 사용자가 입력하는 명령어를 상수로 모음" />
   </component>
 </project>

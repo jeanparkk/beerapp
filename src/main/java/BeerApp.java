@@ -1,7 +1,5 @@
-import db.DBConnection;
-import view.BeerView;
+import view.BeerAppView;
 
-import java.sql.Connection;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -12,7 +10,7 @@ public class BeerApp {
     }
 
     private static void beerAppStart() {
-        BeerView view = new BeerView();
+        BeerAppView view = new BeerAppView();
         Scanner scan = new Scanner(System.in);
 
         while (true) {
@@ -24,7 +22,7 @@ public class BeerApp {
             String[] commandAndParams = view.separateCommandAndParams(input);
             String command = commandAndParams[0];
             if (commandAndParams.length == 1) {
-                view.renderNoParams(command);
+                view.renderWithoutParams(command);
             } else {
                 try {
                     Map<String, Object> params = view.getParams(commandAndParams);
