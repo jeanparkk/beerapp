@@ -1,7 +1,20 @@
 package view;
 
+import service.StyleService;
+
+import java.util.Map;
+
 public class StyleView {
-    public StyleView(){
-        //StyleService 연결
+    private final StyleService styleService;
+    public StyleView(StyleService styleService){
+        this.styleService = styleService;
+    }
+
+    public void create(Map<String, Object> params) {
+
+    }
+
+    public void findStyles() {
+
     }
 }
