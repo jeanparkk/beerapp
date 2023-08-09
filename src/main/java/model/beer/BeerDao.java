@@ -23,7 +23,7 @@ public class BeerDao {
 
             return statement.executeUpdate();
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("맥주 등록 실패");
         }
 
         return -1;
@@ -43,7 +43,7 @@ public class BeerDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("맥주 조회 실패");
         }
         return null;
     }
@@ -61,7 +61,7 @@ public class BeerDao {
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-            throw new RuntimeException("ERROR: " + e.getMessage());
+            throw new RuntimeException("스타일별 맥주 목록 조회 실패");
         }
 
         return beers;
@@ -74,7 +74,7 @@ public class BeerDao {
             statement.setInt(1, beerId);
             return statement.executeUpdate();
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("맥주 단종 오류");
         }
 
         return -1;

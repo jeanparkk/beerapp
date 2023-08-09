@@ -18,7 +18,7 @@ public class BreweryDao {
 
             return statement.executeUpdate();
         }catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("양조장 등록 실패");
         }
 
         return -1;
@@ -35,7 +35,7 @@ public class BreweryDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("전체 양조장 목록 보기 실패");
             return null;
         }
         return breweries;

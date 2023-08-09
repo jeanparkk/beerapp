@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5895685d-5a4c-4183-8e8b-d422e83144ff" name="Changes" comment="feat: 각 도메인에 해당하는 View 클래스 생성&#10;BeerView.java 파일 추가&#10;OutBeerView.java 파일 추가&#10;BreweryView.java 파일 추가&#10;StyleView.java 파일 추가">
+    <list default="true" id="5895685d-5a4c-4183-8e8b-d422e83144ff" name="Changes" comment="feat: 각 View와 Service 의존관계 형성 및 요청 메서드 틀 구현&#10;AppConfig.java 코드 추가: BreweryService, StyleService 등록&#10;BreweryService.java 코드 수정: 의존관계 변경 Connection -&gt; Dao&#10;StyleService.java 코드 수정: 의존관계 변경 Connection -&gt; Dao&#10;BeerAppView.java 코드 추가: 각 요청에 필요한 view 메서드 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/BreweryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BreweryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/StyleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/StyleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/BeerAppView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/BeerAppView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/BeerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/BeerView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/BreweryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/BreweryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/OutBeerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/OutBeerView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/StyleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/StyleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/beer/BeerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/beer/BeerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/brewery/BreweryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/brewery/BreweryDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691439548815</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: 각 View와 Service 의존관계 형성 및 요청 메서드 틀 구현&#10;AppConfig.java 코드 추가: BreweryService, StyleService 등록&#10;BreweryService.java 코드 수정: 의존관계 변경 Connection -&gt; Dao&#10;StyleService.java 코드 수정: 의존관계 변경 Connection -&gt; Dao&#10;BeerAppView.java 코드 추가: 각 요청에 필요한 view 메서드 추가">
+      <created>1691528500741</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1691528500741</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -291,6 +292,7 @@
     <MESSAGE value="feat: BeerApp Console 틀 구현&#10;BeerView.java 파일 추가: View 처리에 필요한 부분을 담당&#10;CommandConst.java 파일 추가: 사용자가 입력하는 명령어를 상수로 모음&#10;BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가" />
     <MESSAGE value="feat: BeerApp Console 틀 구현&#10;BeerView.java 파일 추가: View 처리에 필요한 부분을 담당&#10;CommandConst.java 파일 추가: 사용자가 입력하는 명령어를 상수로 모음" />
     <MESSAGE value="feat: 각 도메인에 해당하는 View 클래스 생성&#10;BeerView.java 파일 추가&#10;OutBeerView.java 파일 추가&#10;BreweryView.java 파일 추가&#10;StyleView.java 파일 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 각 도메인에 해당하는 View 클래스 생성&#10;BeerView.java 파일 추가&#10;OutBeerView.java 파일 추가&#10;BreweryView.java 파일 추가&#10;StyleView.java 파일 추가" />
+    <MESSAGE value="feat: 각 View와 Service 의존관계 형성 및 요청 메서드 틀 구현&#10;AppConfig.java 코드 추가: BreweryService, StyleService 등록&#10;BreweryService.java 코드 수정: 의존관계 변경 Connection -&gt; Dao&#10;StyleService.java 코드 수정: 의존관계 변경 Connection -&gt; Dao&#10;BeerAppView.java 코드 추가: 각 요청에 필요한 view 메서드 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 각 View와 Service 의존관계 형성 및 요청 메서드 틀 구현&#10;AppConfig.java 코드 추가: BreweryService, StyleService 등록&#10;BreweryService.java 코드 수정: 의존관계 변경 Connection -&gt; Dao&#10;StyleService.java 코드 수정: 의존관계 변경 Connection -&gt; Dao&#10;BeerAppView.java 코드 추가: 각 요청에 필요한 view 메서드 추가" />
   </component>
 </project>
