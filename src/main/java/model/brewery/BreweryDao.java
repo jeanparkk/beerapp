@@ -12,7 +12,7 @@ public class BreweryDao {
     }
     //양조장 등록
     public int createBrewery(String name) throws SQLException{
-        String query = "INSERT INTO brewery (name, created_at) VALUES(?,?,now())";
+        String query = "INSERT INTO brewery (name, created_at) VALUES(?,now())";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, name);
 

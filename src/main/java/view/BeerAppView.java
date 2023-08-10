@@ -11,6 +11,10 @@ import static view.CommandConst.*;
 
 public class BeerAppView {
     private final AppConfig appConfig;
+    private final BeerView beerView;
+    private final OutBeerView outBeerView;
+    private final BreweryView breweryView;
+    private final StyleView styleView;
 
     public BeerAppView() {
         this.appConfig = AppConfig.getInstance();

@@ -3,8 +3,6 @@ package view;
 import dto.StyleRespDto;
 import service.StyleService;
 
-import java.sql.Timestamp;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
 
@@ -48,23 +46,11 @@ public class StyleView {
     private void printRow(String[] input) {
         StringBuilder builder = new StringBuilder();
         for (String str : input) {
-            builder.append(formatData(str));
+            builder.append(ViewFormatter.getFormatData(str));
         }
         System.out.println(builder);
     }
 
-    private String formatData(String data) {
-        if (data == null) {
-            return "";
-        }
-        return String.format("%-8s", data);
-    }
-    private String getFormatDate(Timestamp timestamp) {
-        if (timestamp == null) {
-            return "";
-        }
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYY.MM.dd");
-        return timestamp.toLocalDateTime().format(formatter);
-    }
+
 
 }

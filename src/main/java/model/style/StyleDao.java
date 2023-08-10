@@ -12,6 +12,7 @@ public class StyleDao {
     public StyleDao(Connection connection) {
         this.connection = connection;
     }
+
     //스타일등록
     public int createStyle(int breweryId, String name) throws SQLException {
         String query = "INSERT INTO style (brewery_id, name, created_at) VALUES(?,?,now())";
@@ -28,7 +29,7 @@ public class StyleDao {
     }
 
     //전체 스타일 목록 보기
-    public List<StyleRespDto> getAllStyles(int id){
+    public List<StyleRespDto> getAllStyles(){
         List<StyleRespDto> styles = new ArrayList<>();
         String query ="SELECT s.id AS style_id, s.name AS style_name, b.id AS brewery_id, b.name AS brewery_name  " +
                 "FROM style s " +
