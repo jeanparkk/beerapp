@@ -12,13 +12,13 @@ public class BreweryDao {
     }
     //양조장 등록
     public int createBrewery(String name) throws SQLException{
-        String query = "INSERT INTO brewery (name, created_at) VALUES(?,?,now())";
+        String query = "INSERT INTO brewery (name, created_at) VALUES(?,now())";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, name);
 
             return statement.executeUpdate();
         }catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("양조장 등록 실패");
         }
 
         return -1;
@@ -35,7 +35,7 @@ public class BreweryDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("전체 양조장 목록 보기 실패");
             return null;
         }
         return breweries;
