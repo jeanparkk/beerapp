@@ -16,14 +16,14 @@ public class BeerDao {
 
     // 맥주 등록
     public  int createBeer(int styleId, String beerName) {
-        String query = "INSERT INTO beer (style_id, name, created_at) VALUES (?, ?, ?, now())";
+        String query = "INSERT INTO beer (style_id, name, created_at) VALUES (?, ?, now())";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, styleId);
             statement.setString(2, beerName);
 
             return statement.executeUpdate();
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("맥주 등록 실패");
         }
 
         return -1;
@@ -43,7 +43,7 @@ public class BeerDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("맥주 조회 실패");
         }
         return null;
     }
@@ -61,7 +61,7 @@ public class BeerDao {
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-            throw new RuntimeException("ERROR: " + e.getMessage());
+            throw new RuntimeException("스타일별 맥주 목록 조회 실패");
         }
 
         return beers;
@@ -69,12 +69,12 @@ public class BeerDao {
 
     // 맥주 단종
     public int convertOutBeer(int beerId) {
-        String query = "UPDATE beer SET beer_id = null where id = ?";
+        String query = "UPDATE beer SET style_id = null where id = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, beerId);
             return statement.executeUpdate();
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("맥주 단종 오류");
         }
 
         return -1;

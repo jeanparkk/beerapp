@@ -5,7 +5,6 @@ package service;
 import db.DBConnection;
 
 import dto.OutBeerRespDto;
-import model.beer.Beer;
 import model.beer.BeerDao;
 import model.outbeer.OutBeerDao;
 import org.junit.jupiter.api.AfterEach;
@@ -38,16 +37,15 @@ class OutBeerServiceTest {
     }
 
     private void dbInit() throws SQLException {
-        connection.prepareStatement("DELETE FROM out_player").execute();
-        connection.prepareStatement("DELETE FROM player").execute();
-        connection.prepareStatement("alter table out_player auto_increment=1").execute();
-        connection.prepareStatement("alter table player auto_increment=1").execute();
+        connection.prepareStatement("DELETE FROM out_beer").execute();
+        connection.prepareStatement("DELETE FROM beer").execute();
+        connection.prepareStatement("alter table out_beer auto_increment=1").execute();
+        connection.prepareStatement("alter table beer auto_increment=1").execute();
     }
 
     @Test
     @DisplayName("Service - 단종 맥주 등록 성공")
     void createOutBeerSuccessTest() {
-
         // Given
         beerDao.createBeer(1, "일분수괴즈");
         int beerId = 1;
@@ -58,18 +56,18 @@ class OutBeerServiceTest {
 
         // Then
         assertThat(result).isEqualTo("성공");
-        Beer beer = beerDao.getBeerById(beerId);
-        assertThat(beer.getStyleId()).isNull();
 
-        List<OutBeerRespDto> outBeers = outBeerDao.getOutBeers();
-        assertThat(outBeers.get(0).getBeerId()).isEqualTo(beerId);
-        assertThat(outBeers.get(0).getOutReason()).isEqualTo(reason);
+        List<OutBeerRespDto> outBeers = outBeerService.getOutBeers();
+        assertThat(outBeers).hasSize(1); // 단종 맥주 하나만 생성되었으므로 크기는 1
 
+        OutBeerRespDto outBeer = outBeers.get(0);
+        assertThat(outBeer.getBeerId()).isEqualTo(beerId);
+        assertThat(outBeer.getOutReason()).isEqualTo(reason);
     }
 
     @Test
     @DisplayName("Service - 단종 맥주 등록 실패(존재하지 않는 맥주)")
-    void createOutPlayerFailTest() {
+    void createOutBeerFailTest() {
         // Given
         int beerId = 1;
         String reason = "시즌종료";

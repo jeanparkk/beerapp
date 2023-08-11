@@ -97,7 +97,7 @@ class BeerDaoTest {
 
     @Test
     @DisplayName("맥주 단종 시 styleId를 null로 변경")
-    void convertOutPlayerTest() {
+    void convertOutBeerTest() {
         // Given
         beerDao.createBeer(1, "일분수괴즈");
         int beerId = 1;

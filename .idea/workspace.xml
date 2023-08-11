@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5895685d-5a4c-4183-8e8b-d422e83144ff" name="Changes" comment="feat: Beer Service 구현 및 테스트 완료&#10;BeerService.java 파일 추가&#10;BeerServiceTest.java 파일 추가">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/service/OutBeerServiceTest.java" afterDir="false" />
+    <list default="true" id="5895685d-5a4c-4183-8e8b-d422e83144ff" name="Changes" comment="refactor: OutBeerServiceTest, OutBeerDaoTest 날짜 형식 변경/OutBeerDao, BeerDaoTest.java 오타수정/ BeerDao 쿼리 수정">
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/BreweryServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/StyleServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/OutBeerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/OutBeerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -44,18 +53,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Gradle.BeerDaoTest">
-    <configuration name="BeerDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+}</component>
+  <component name="RunManager" selected="Application.StyleServiceTest">
+    <configuration name="BreweryServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="service.BreweryServiceTest" />
+      <module name="untitled.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StyleServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="service.StyleServiceTest" />
+      <module name="untitled.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutBeerDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -68,7 +103,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;model.beer.BeerDaoTest&quot;" />
+            <option value="&quot;model.outbeer.OutBeerDaoTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -78,7 +113,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DBConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OutBeerDaoTest.getOutBeers" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -91,7 +126,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;db.DBConnectionTest&quot;" />
+            <option value="&quot;model.outbeer.OutBeerDaoTest.getOutBeers&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -101,7 +136,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DBConnectionTest.DBConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'untitled.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -113,8 +148,6 @@
         <option name="taskNames">
           <list>
             <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;db.DBConnectionTest.DBConnectionTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -126,9 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.BeerDaoTest" />
-        <item itemvalue="Gradle.DBConnectionTest.DBConnectionTest" />
-        <item itemvalue="Gradle.DBConnectionTest" />
+        <item itemvalue="Application.StyleServiceTest" />
+        <item itemvalue="Application.BreweryServiceTest" />
+        <item itemvalue="Gradle.Tests in 'untitled.test'" />
+        <item itemvalue="Gradle.OutBeerDaoTest" />
+        <item itemvalue="Gradle.OutBeerDaoTest.getOutBeers" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +239,84 @@
       <option name="project" value="LOCAL" />
       <updated>1691262629914</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: OutPlayer Service 구현 및 테스트 완료&#10;OutPlayerService.java 파일 추가&#10;OutPlayerServiceTest.java 파일 추가">
+      <created>1691265611322</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1691265611322</updated>
+    </task>
+    <task id="LOCAL-00011" summary="AppConfig.java 파일 추가: Connection, Dao, Service에 대한 의존성 관리">
+      <created>1691352985176</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1691352985176</updated>
+    </task>
+    <task id="LOCAL-00012" summary="BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가">
+      <created>1691353256271</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1691353256271</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: BeerApp Console 틀 구현&#10;BeerView.java 파일 추가: View 처리에 필요한 부분을 담당&#10;CommandConst.java 파일 추가: 사용자가 입력하는 명령어를 상수로 모음&#10;BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가">
+      <created>1691354273471</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1691354273471</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: BeerApp Console 틀 구현&#10;BeerView.java 파일 추가: View 처리에 필요한 부분을 담당&#10;CommandConst.java 파일 추가: 사용자가 입력하는 명령어를 상수로 모음">
+      <created>1691354300329</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1691354300329</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: 각 도메인에 해당하는 View 클래스 생성&#10;BeerView.java 파일 추가&#10;OutBeerView.java 파일 추가&#10;BreweryView.java 파일 추가&#10;StyleView.java 파일 추가">
+      <created>1691439548815</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1691439548815</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: 각 View와 Service 의존관계 형성 및 요청 메서드 틀 구현&#10;AppConfig.java 코드 추가: BreweryService, StyleService 등록&#10;BreweryService.java 코드 수정: 의존관계 변경 Connection -&gt; Dao&#10;StyleService.java 코드 수정: 의존관계 변경 Connection -&gt; Dao&#10;BeerAppView.java 코드 추가: 각 요청에 필요한 view 메서드 추가">
+      <created>1691528500741</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1691528500741</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor: Beer, OutBeer Dao 예외처리 메시지 리펙토링&#10;PlayerDao.java 코드 수정&#10;OutPlayerDao.java 코드 수정">
+      <created>1691608814761</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1691608814761</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat : Brewery, Style View 구현&#10;BreweryView.java 코드 추가&#10;StyleView.java 코드 추가">
+      <created>1691610094123</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1691610094123</updated>
+    </task>
+    <task id="LOCAL-00019" summary="refactor: 각 View에서 공통적으로 사용하는 Format을 클래스로 분리&#10;feat: BreweryService, StyleService, OutBeerView 작성">
+      <created>1691704387833</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1691704387833</updated>
+    </task>
+    <task id="LOCAL-00020" summary="refactor: OutBeerServiceTest, OutBeerDaoTest 날짜 형식 변경/OutBeerDao, BeerDaoTest.java 오타수정/ BeerDao 쿼리 수정">
+      <created>1691794883414</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1691794883414</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,8 +338,20 @@
     <MESSAGE value="feat: Beer, OutBeer, Brewery, Style의 Dao 작성" />
     <MESSAGE value="feat: Beer, OutBeer, Brewery, Style의 Dao의 테스트코드 작성&#10;feat: OutBeerRespDto, StyleRespDto 작성&#10;refactor: BeerDao, OutBeerDao, StyleDao 리펙토링" />
     <MESSAGE value="feat: Beer 단종 기능 추가" />
-    <MESSAGE value="refactor: playerDao, outPlayerDao 코드 수정 및 테스트 코드 수정&#10;PlayerDao.java 코드 수정: Connection에 대한 getter 추가, 예외 처리&#10;OutPlayerDao.java 코드 수정: Connection에 대한 getter 추가&#10;PlayerDaoTest.java 코드 수정: DB 데이터 삭제 auto_increment 초기화 코드 추가&#10;OutPlayerDaoTest.java 코드 수정: DB 데이터 삭제 auto_increment 초기화 코드 추가" />
+    <MESSAGE value="refactor: beerDao, outBeerDao 코드 수정 및 테스트 코드 수정&#10;BeerDao.java 코드 수정: Connection에 대한 getter 추가, 예외 처리&#10;OutBeerDao.java 코드 수정: Connection에 대한 getter 추가&#10;BeerDaoTest.java 코드 수정: DB 데이터 삭제 auto_increment 초기화 코드 추가&#10;OutBeerDaoTest.java 코드 수정: DB 데이터 삭제 auto_increment 초기화 코드 추가" />
     <MESSAGE value="feat: Beer Service 구현 및 테스트 완료&#10;BeerService.java 파일 추가&#10;BeerServiceTest.java 파일 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Beer Service 구현 및 테스트 완료&#10;BeerService.java 파일 추가&#10;BeerServiceTest.java 파일 추가" />
+    <MESSAGE value="feat: OutBeer Service 구현 및 테스트 완료&#10;OutBeerService.java 파일 추가&#10;OutBeerServiceTest.java 파일 추가" />
+    <MESSAGE value="AppConfig.java 파일 추가: Connection, Dao, Service에 대한 의존성 관리" />
+    <MESSAGE value="BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가" />
+    <MESSAGE value="feat: BeerApp Console 틀 구현&#10;BeerView.java 파일 추가: View 처리에 필요한 부분을 담당&#10;CommandConst.java 파일 추가: 사용자가 입력하는 명령어를 상수로 모음&#10;BeerApp.java 코드 수정: 사용자의 입력을 받고, View로 랜더링 요청 로직 추가" />
+    <MESSAGE value="feat: BeerApp Console 틀 구현&#10;BeerView.java 파일 추가: View 처리에 필요한 부분을 담당&#10;CommandConst.java 파일 추가: 사용자가 입력하는 명령어를 상수로 모음" />
+    <MESSAGE value="feat: 각 도메인에 해당하는 View 클래스 생성&#10;BeerView.java 파일 추가&#10;OutBeerView.java 파일 추가&#10;BreweryView.java 파일 추가&#10;StyleView.java 파일 추가" />
+    <MESSAGE value="feat: 각 View와 Service 의존관계 형성 및 요청 메서드 틀 구현&#10;AppConfig.java 코드 추가: BreweryService, StyleService 등록&#10;BreweryService.java 코드 수정: 의존관계 변경 Connection -&gt; Dao&#10;StyleService.java 코드 수정: 의존관계 변경 Connection -&gt; Dao&#10;BeerAppView.java 코드 추가: 각 요청에 필요한 view 메서드 추가" />
+    <MESSAGE value="refactor: Beer, OutBeer Dao 예외처리 메시지 리펙토링&#10;PlayerDao.java 코드 수정&#10;OutPlayerDao.java 코드 수정" />
+    <MESSAGE value="feat : Brewery, Style View 구현&#10;BreweryView.java 코드 추가&#10;StyleView.java 코드 추가" />
+    <MESSAGE value="refactor: 각 View에서 공통적으로 사용하는 Format을 클래스로 분리&#10;feat: BreweryService, StyleService, OutBeerView 작성" />
+    <MESSAGE value="refactor: OutBeerServiceTest 날짜 형식 변경" />
+    <MESSAGE value="refactor: OutBeerServiceTest, OutBeerDaoTest 날짜 형식 변경/OutBeerDao, BeerDaoTest.java 오타수정/ BeerDao 쿼리 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: OutBeerServiceTest, OutBeerDaoTest 날짜 형식 변경/OutBeerDao, BeerDaoTest.java 오타수정/ BeerDao 쿼리 수정" />
   </component>
 </project>

@@ -6,6 +6,8 @@ import lombok.Getter;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.Timestamp;
+
 @Getter
 public class OutBeerDao {
 
@@ -33,9 +35,9 @@ public class OutBeerDao {
     // 단종 맥주 목록 조회
     public List<OutBeerRespDto> getOutBeers() {
         List<OutBeerRespDto> outBeers = new ArrayList<>();
-        String query = "SELECT b.id 'id', b.name 'name', o.reason 'reason', date_format(o.created_at, '%Y.%m.%d') 'outDate' " +
+        String query = "SELECT b.id 'id', b.name 'name', o.reason 'reason', o.created_at 'outDate' " +
                 "FROM out_beer o " +
-                "RIGHT OUTER JOIN beer p " +
+                "RIGHT OUTER JOIN beer b " +
                 "ON o.beer_id = b.id";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             try (ResultSet resultSet = statement.executeQuery()) {

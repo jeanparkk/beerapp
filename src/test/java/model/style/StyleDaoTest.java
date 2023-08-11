@@ -58,7 +58,7 @@ public class StyleDaoTest {
         styleDao.createStyle(3,"라거");
 
         // When
-        List<StyleRespDto> styles = styleDao.getAllStyles(id);
+        List<StyleRespDto> styles = styleDao.getAllStyles();
 
         // Then
         Assertions.assertNotNull(styles);

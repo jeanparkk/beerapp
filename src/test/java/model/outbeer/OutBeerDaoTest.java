@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -63,18 +64,22 @@ class OutBeerDaoTest {
         outBeerDao.createOutBeer(2, "효모단종"); // 이분수괴즈 단종
         outBeerDao.createOutBeer(3, "시즌종료"); // 삼분수괴즈 단종
 
-        LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("YYYY.MM.dd");
-        String todayDate = now.format(dateTimeFormatter);
+        Timestamp now = Timestamp.valueOf(LocalDateTime.now());
+        String currentDate = getFormatDate(now);
 
         // When
-        List<OutBeerRespDto> outbeers = outBeerDao.getOutBeers();
+        List<OutBeerRespDto> outBeers = outBeerDao.getOutBeers();
 
         // Then
-        assertThat(outbeers.size()).isEqualTo(3);
-        assertThat(outbeers.get(1).getOutReason()).isEqualTo("효모단종");
-        assertThat(outbeers.get(2).getOutReason()).isEqualTo("시즌종료");
-        assertThat(outbeers.get(2).getOutDate()).isEqualTo(todayDate);
+        assertThat(outBeers.size()).isEqualTo(3);
+        assertThat(outBeers.get(1).getOutReason()).isEqualTo("효모단종");
+        assertThat(outBeers.get(2).getOutReason()).isEqualTo("시즌종료");
+        assertThat(getFormatDate(outBeers.get(2).getOutDate())).isEqualTo(currentDate);
+    }
+
+    private String getFormatDate(Timestamp timestamp) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYY.MM.dd");
+        return timestamp.toLocalDateTime().format(formatter);
     }
 
 }
